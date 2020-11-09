@@ -32,11 +32,10 @@ export function getXlsxStream(options: IXlsxStreamOptions) {
                     for (let i = 0; i < children.length; i++) {
                         const ch = children[i];
                         if (ch.children) {
-                            let value = null
-                            if(ch.attribs.t === "inlineStr"){
-                                value = ch.children.is.children.t.value
-                            }
-                            else{
+                            let value: any = null;
+                            if (ch.attribs.t === "inlineStr") {
+                                value = ch.children.is.children.t.value;
+                            } else {
                                 value = ch.children.v.value;
                                 if (ch.attribs.t === "s") {
                                     value = strings[value];
