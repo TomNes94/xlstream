@@ -9,6 +9,9 @@
         "test": "jest --coverage",
         "codecov": "codecov"
     },
+    "precommit": [
+        "build"
+    ],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Claviz/xlstream.git"
